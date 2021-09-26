@@ -1,46 +1,26 @@
 import React from 'react';
-import {StyleSheet, useColorScheme,} from 'react-native';
-import {NavigationContainer} from '@react-navigation/native';
-import {Colors,} from 'react-native/Libraries/NewAppScreen';
-import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
+import {DefaultTheme, Provider as PaperProvider} from 'react-native-paper';
+import {App as AppHolder} from './src/App';
+import {NavigationContainer} from "@react-navigation/native";
 
 const theme = {
   ...DefaultTheme,
   colors: {
     ...DefaultTheme.colors,
-    primary: 'tomato',
-    accent: 'yellow',
+    // primary: '#ff7043',
+    primary: '#03dac5',
+    accent: '#ffa270',
+      text: '#260f03'
   },
 };
 const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
   return (
       <PaperProvider theme={theme}>
-        <NavigationContainer>
-
-        </NavigationContainer>
+          <NavigationContainer theme={theme}>
+              <AppHolder />
+          </NavigationContainer>
       </PaperProvider>
   );
 };
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
 
 export default App;

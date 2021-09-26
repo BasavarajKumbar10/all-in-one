@@ -3,7 +3,7 @@ import {Text} from "react-native";
 
 function CabsScreen() {
 
-    return <Text>EVs charge</Text>
+    return <Text>Cabs</Text>
 }
 
 export default CabsScreen;
