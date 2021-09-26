@@ -30,7 +30,6 @@ export default function HomeContainer() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingHorizontal: containerMargin,
     },
     view: {
          paddingVertical: scrollViewBottomSpace,

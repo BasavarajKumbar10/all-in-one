@@ -5,7 +5,7 @@ export enum IconsType {
 }
 
 export enum SectionType {
-    banner,
+    carousal,
     icons
 }
 export interface IIcon {

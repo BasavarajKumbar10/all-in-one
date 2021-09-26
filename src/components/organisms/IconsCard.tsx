@@ -13,7 +13,7 @@ interface IProps {
 export default function IconsCard(props: IProps) {
     const { title, list } = props;
     return (
-        <Card style={styles.card} mode={"elevated"}>
+        <Card style={styles.card} mode={"elevated"} key={title}>
             <Card.Title title={title} />
             <Card.Content style={styles.content}>
             {list.map((item) => {
@@ -31,6 +31,7 @@ export default function IconsCard(props: IProps) {
 const styles = StyleSheet.create({
     card: {
         marginVertical: 6,
+        marginHorizontal: containerMargin,
     },
     content: {
         flex: 1,
