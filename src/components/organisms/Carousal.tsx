@@ -7,12 +7,16 @@ interface IProps {
     children: any;
     customStyle?: any;
     color?: string;
+    paginationStyle?: any;
 }
 
 export function Carousal(props: IProps){
-    const { children, color = '#000000', customStyle = {} } = props;
+    const { children, color = '#000000', customStyle = {}, paginationStyle = {} } = props;
     return (
-        <Swiper style={[styles.container, customStyle]} activeDotColor={color} autoplay loadMinimal>
+        <Swiper style={[styles.container, customStyle]}
+            activeDotColor={color} 
+            paginationStyle={{...styles.paginationStyle, ...paginationStyle}}
+            autoplay loadMinimal>
             {children}
         </Swiper>
     );
@@ -21,5 +25,8 @@ export function Carousal(props: IProps){
 const styles = StyleSheet.create({
     container: {
         height: Screen.height * 0.2,
+    },
+    paginationStyle: {
+        top: Screen.height * 0.2+4,
     }
 });

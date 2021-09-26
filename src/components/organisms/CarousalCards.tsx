@@ -40,6 +40,7 @@ export default function CarousalCards(props: IProps) {
 const styles = StyleSheet.create({
     container: {
         paddingVertical: 10,
+        marginBottom: 4,
     },
     cardHolder: {
         padding: 6,
@@ -51,5 +52,5 @@ const styles = StyleSheet.create({
         padding: 6,
         height: '100%',
         borderRadius: 6,
-    }
+    },
 });
