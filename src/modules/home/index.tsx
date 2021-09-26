@@ -20,7 +20,9 @@ export default function HomeContainer() {
 
     return (
         <ScrollView style={styles.container}>
-            {getSections()}
+            <View style={styles.view}>
+                {getSections()}
+            </View>
         </ScrollView>
     )
 }
@@ -29,7 +31,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         paddingHorizontal: containerMargin,
-        paddingBottom: scrollViewBottomSpace,
-        paddingTop: containerMargin,
+    },
+    view: {
+         paddingVertical: scrollViewBottomSpace,
     }
 })
