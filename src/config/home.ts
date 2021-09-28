@@ -11,7 +11,7 @@ export const HomeConfig: ICard[] = [
                 label: 'some label if needed'
             },
             {
-                imageUrl: 'https://images.ctfassets.net/hrltx12pl8hq/3MbF54EhWUhsXunc5Keueb/60774fbbff86e6bf6776f1e17a8016b4/04-nature_721703848.jpg?fit=fill&w=480&h=270',
+                imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png',
                 label: 'some label if needed'
             },
             {

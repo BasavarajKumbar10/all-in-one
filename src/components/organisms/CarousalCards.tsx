@@ -39,18 +39,18 @@ export default function CarousalCards(props: IProps) {
 
 const styles = StyleSheet.create({
     container: {
-        paddingVertical: 10,
+        paddingBottom: 4,
         marginBottom: 4,
     },
     cardHolder: {
         padding: 6,
         width: Screen.width,
         borderRadius: 6,
-        backgroundColor: '#ECEFF1'
     },
     image: { 
         padding: 6,
         height: '100%',
         borderRadius: 6,
+        backgroundColor: '#CFD8DC'
     },
 });
