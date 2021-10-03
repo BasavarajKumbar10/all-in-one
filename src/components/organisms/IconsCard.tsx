@@ -18,7 +18,7 @@ export default function IconsCard(props: IProps) {
             <Card.Content style={styles.content}>
             {list.map((item) => {
                return (
-                   <View style={styles.icon}>
+                   <View style={styles.icon} key={item.label}>
                        <IconLabel label={item.label} icon={item.icon} key={item.label} />
                    </View>
                )

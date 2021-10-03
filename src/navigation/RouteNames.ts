@@ -4,4 +4,6 @@ export const RouteNames = Object.freeze({
     cabs: 'Cabs',
     evCharge: 'Ev Charge',
     promotion: 'Promotion',
+    evList: 'EVs List',
+    evMap: 'evMap'
 });

@@ -12,7 +12,8 @@
         }],
         "isAvailable": true,
         "imageUrl": "https://images.pexels.com/photos/1987301/pexels-photo-1987301.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-        "id": "saf234s5df"
+        "id": "saf234s5df",
+        "type": ["AC Type 1", "AC Type 2", "DC"]
     },
     {
         "operator": "Operator 2",
@@ -27,7 +28,8 @@
         }],
         "isAvailable": false,
         "imageUrl": "https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510__340.jpg",
-        "id": "saf23dfsf"
+        "id": "saf23dfsf",
+        "type": ["AC Type 1"]
     },
     {
         "operator": "Operator 3",
@@ -42,7 +44,8 @@
         }],
         "isAvailable": true,
         "imageUrl": "https://media.istockphoto.com/photos/colored-powder-explosion-abstract-closeup-dust-on-backdrop-colorful-picture-id1072093690?k=20&m=1072093690&s=612x612&w=0&h=Ns3WeEm1VrIHhZOmhiGY_fYKvIlbJrVADLqfxyPQVPM=",
-        "id": "saf234s234dff"
+        "id": "saf234s234dff",
+        "type": ["DC"]
     },
     {
         "operator": "Operator 4",
@@ -57,7 +60,8 @@
         }],
         "isAvailable": true,
         "imageUrl": "https://images.pexels.com/photos/1987301/pexels-photo-1987301.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-        "id": "saf23dfa4sdf"
+        "id": "saf23dfa4sdf",
+        "type": ["AC Type 2", "DC"]
     },
     {
         "operator": "Operator 5",
@@ -72,7 +76,8 @@
         }],
         "isAvailable": true,
         "imageUrl": "https://images.pexels.com/photos/1987301/pexels-photo-1987301.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-        "id": "saf232344sdf"
+        "id": "saf232344sdf",
+        "type": ["AC Type 2"]
     },
     {
         "operator": "Operator 6",
@@ -87,6 +92,7 @@
         }],
         "isAvailable": true,
         "imageUrl": "https://images.pexels.com/photos/1987301/pexels-photo-1987301.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-        "id": "saf234123sdf"
+        "id": "saf234123sdf",
+        "type": ["AC Type 2"]
     }
 ]
