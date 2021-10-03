@@ -1,5 +1,6 @@
 import React from "react";
-import {ICard, SectionType} from "../../config/interfaces";
+import { SectionType } from "../../config/enums";
+import {ICard} from "../../interfaces/homeData";
 import CarousalCards from "./CarousalCards";
 import IconsCard from "./IconsCard";
 

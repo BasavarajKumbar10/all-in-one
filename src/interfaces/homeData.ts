@@ -1,13 +1,5 @@
+import { IconsType, SectionType } from "../config/enums";
 
-export enum IconsType {
-    ionicons,
-    materialIcon,
-}
-
-export enum SectionType {
-    carousal,
-    icons
-}
 export interface IIcon {
     name: string;
     size?: number;

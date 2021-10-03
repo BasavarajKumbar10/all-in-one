@@ -1,0 +1,95 @@
+[
+    {
+        "title": "Carousal",
+        "type": 0,
+        "list": [
+            {
+                "imageUrl": "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg",
+                "label": "some label if needed"
+            },
+            {
+                "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png",
+                "label": "some label if needed"
+            },
+            {
+                "imageUrl": "https://static.toiimg.com/thumb/msid-54559212,width-748,height-499,resizemode=4,imgsize-307081/.jpg",
+                "label": "some label if needed"
+            }
+        ]
+    },
+    {
+      "title": "Transfer Money",
+      "type": 1,
+      "list": [
+        {
+          "icon": {
+            "name": "account-arrow-left-outline",
+            "type": "MaterialCommunityIcons"
+          },
+          "label": "Self Transfer"
+        },
+        {
+          "icon": {
+            "name": "send-to-mobile",
+            "type": "MaterialIcons"
+          },
+          "label": "To Other Account"
+        },
+        {
+          "icon": {
+            "name": "bank-outline",
+            "type": "MaterialCommunityIcons"
+          },
+          "label": "Bank Transfer"
+        },
+        {
+          "icon": {
+            "name": "account-cash-outline",
+            "type": "MaterialCommunityIcons"
+          },
+          "label": "Balance Check"
+        }
+      ]
+    },
+    {
+      "title": "Bill Payments & Recharge",
+      "type": 1,
+      "list": [
+        {
+          "icon": {
+            "name": "mobile-friendly",
+            "type": "MaterialIcons"
+          },
+          "label": "Mobile Prepaid"
+        },
+        {
+          "icon": {
+            "name": "cellphone-arrow-down",
+            "type": "MaterialCommunityIcons"
+          },
+          "label": "Mobile Postpaid"
+        },
+        {
+          "icon": {
+            "name": "lightbulb-on-outline",
+            "type": "MaterialCommunityIcons"
+          },
+          "label": "Electricity Bill"
+        },
+        {
+          "icon": {
+            "name": "home-import-outline",
+            "type": "MaterialCommunityIcons"
+          },
+          "label": "Rent Payment"
+        },
+        {
+          "icon": {
+            "name": "satellite",
+            "type": "FontAwesome5"
+          },
+          "label": "DTH-Broadband"
+        }
+      ]
+    }
+  ]

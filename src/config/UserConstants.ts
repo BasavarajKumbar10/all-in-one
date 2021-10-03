@@ -9,3 +9,6 @@ export const UserConstants = Object.freeze({
     transferMoney: 'Transfer Money'
 });
 
+export const Currency = Object.freeze({
+    INR: '\u20B9',
+});

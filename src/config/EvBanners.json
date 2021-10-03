@@ -1,0 +1,18 @@
+{
+    "title": "Evs Banners",
+    "type": 0,
+    "list": [
+        {
+            "imageUrl": "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg",
+            "label": "some label if needed"
+        },
+        {
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png",
+            "label": "some label if needed"
+        },
+        {
+            "imageUrl": "https://static.toiimg.com/thumb/msid-54559212,width-748,height-499,resizemode=4,imgsize-307081/.jpg",
+            "label": "some label if needed"
+        }
+    ]
+}

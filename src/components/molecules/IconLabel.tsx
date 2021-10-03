@@ -1,5 +1,5 @@
 import React, {useCallback} from "react";
-import {IIcon} from "../../config/interfaces";
+import {IIcon} from "../../interfaces/homeData";
 import {StyleSheet, View} from "react-native";
 import DynamicIcon from "../atoms/DynamicIcon";
 import {Caption, Paragraph, TouchableRipple, useTheme} from "react-native-paper";

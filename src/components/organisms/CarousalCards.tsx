@@ -1,5 +1,5 @@
 import React from "react";
-import { IListItem } from "../../config/interfaces";
+import { IListItem } from "../../interfaces/homeData";
 import { Card, Surface, useTheme } from "react-native-paper";
 import IconLabel from "../molecules/IconLabel";
 import { StyleSheet, View } from "react-native";

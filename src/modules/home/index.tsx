@@ -1,6 +1,6 @@
 import React from "react";
 import {ScrollView, StyleSheet, View} from "react-native";
-import { HomeConfig } from '../../config/home'
+import HomeConfig from '../../config/home.json'
 import SectionCard from "../../components/organisms/SectionCard";
 import {containerMargin, scrollViewBottomSpace} from "../../theme/measures";
 
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
-    view: {
-         paddingVertical: scrollViewBottomSpace,
+    view: {     
+         paddingBottom: scrollViewBottomSpace,
     }
 })

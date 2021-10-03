@@ -1,5 +1,5 @@
 import React from "react";
-import {IListItem} from "../../config/interfaces";
+import {IListItem} from "../../interfaces/homeData";
 import {Card, Subheading, Title} from "react-native-paper";
 import IconLabel from "../molecules/IconLabel";
 import {StyleSheet, View} from "react-native";
@@ -13,7 +13,7 @@ interface IProps {
 export default function IconsCard(props: IProps) {
     const { title, list } = props;
     return (
-        <Card style={styles.card} mode={"elevated"} key={title}>
+        <Card style={styles.card} mode={"elevated"} key={title} elevation={2}>
             <Card.Title title={title} />
             <Card.Content style={styles.content}>
             {list.map((item) => {
