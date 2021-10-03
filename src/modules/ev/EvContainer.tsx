@@ -1,18 +1,14 @@
 import React, { useState } from "react";
-import { FlatList, ScrollView, StyleSheet, Text, View } from "react-native";
-import { HomeConfig } from '../../config/home'
+import { SectionList, StyleSheet, View } from "react-native";
 import SectionCard from "../../components/organisms/SectionCard";
 import { containerMargin, Screen, scrollViewBottomSpace } from "../../theme/measures";
 import { EvItem } from "../../components/molecules/EvItem";
 import EvsList from "../../config/EvsList.json";
-import { Empty } from "../../components/molecules/Empty";
-import { Separator } from "../../components/atoms/Divider";
-import { useTheme } from "react-native-paper";
 import EvsBanners from "../../config/EvBanners.json"
 
 const CAROUSAL = 'carousal';
 const EV = 'EV';
-const sectionData = [
+const sectionData: any[] = [
     {
         title: CAROUSAL,
         data: [CAROUSAL]
@@ -24,47 +20,50 @@ const sectionData = [
 ]
 export default function EvContainer() {
     const [evsListData] = useState(EvsList);
-    const { colors } = useTheme();
-    const itemView = ({ item, index }) =>
-    (
-        <EvItem item={item} />
-    )
 
-
-    const key = (item) => item?.id;
-
-    const evsList = () => {
-        return (
-            <FlatList
-                data={evsListData}
-                renderItem={itemView}
-                keyExtractor={key}
-                ItemSeparatorComponent={() => <View style={[styles.separator, { backgroundColor: colors.background }]} />}
-                ListEmptyComponent={<Empty />}
-            />
-        );
+    const itemView = ({ item, index }) => {
+        let view = null;
+        if (item === CAROUSAL) {
+            view = <SectionCard section={EvsBanners} key={EvsBanners.title} />
+        } else if (item?.operator) {
+            view = (
+                <View style={styles.items}>
+                    <EvItem item={item} />
+                </View>
+            )
+        }
+        return view;
     }
 
-    return (
-        <View style={styles.container}>
-            <SectionCard section={EvsBanners} key={EvsBanners.title} />
-            <View style={styles.view}>
-                {evsList()}
-            </View>
-        </View>
-    )
+    const headerView = (info: { section: Section }) => {
+        return null;
+    }
+
+    const key = (item, index) => item + index;
+
+    return <SectionList
+        sections={sectionData}
+        keyExtractor={key}
+        renderItem={itemView}
+        renderSectionHeader={headerView}
+        contentContainerStyle={styles.sectionList}
+        SectionSeparatorComponent={() => <View style={styles.separator} />}
+    />
 }
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
-    view: {
+    sectionList: {
         paddingBottom: scrollViewBottomSpace,
-        paddingHorizontal: containerMargin,
         paddingTop: containerMargin,
     },
     separator: {
         height: Screen.height * 0.01,
+    },
+    items: {
+        paddingHorizontal: containerMargin,
+        marginTop: Screen.height * 0.01,
     }
 })
