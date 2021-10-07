@@ -7,7 +7,7 @@ import {useTheme} from "react-native-paper";
 import {useSafeAreaInsets} from "react-native-safe-area-context";
 
 interface IProps {
-    navigation: INavigation;
+    navigation?: INavigation;
     children: React.ReactElement;
     showNavBar?: boolean;
     screenTitle?: string;
@@ -37,7 +37,7 @@ function ScreenWrapper(props: IProps) {
                 animated={true}
                 backgroundColor={colors.accent}
                 barStyle={"default"}/>
-            {showNavBar && <NavigationBar navigation={navigation} title={screenTitle} />}
+            {showNavBar && <NavigationBar title={screenTitle} />}
             {children}
         </SafeAreaView>
     );

@@ -17,7 +17,7 @@ const theme = {
 const App = () => {
   return (
       <PaperProvider theme={theme}>
-          <NavigationContainer theme={theme}>
+          <NavigationContainer ref={navigationRef} theme={theme}>
               <BottomTabNavigation />
           </NavigationContainer>
       </PaperProvider>

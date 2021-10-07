@@ -9,6 +9,25 @@ function navigate(name: string, params?: Object) {
   }
 }
 
+function getNavigator() {
+  return navigationRef;
+}
+
+function goBack(): void {
+  if (navigationRef.isReady()) {
+    navigationRef.goBack();
+  }
+}
+
+function canGoBack(): boolean {
+  if (navigationRef.isReady()) {
+    return navigationRef.canGoBack();
+  }
+  return false;
+}
+
 export const Navigator = {
     navigate,
+    goBack,
+    canGoBack
 }
