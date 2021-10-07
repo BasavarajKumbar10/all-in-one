@@ -1,10 +1,15 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { SectionList, StyleSheet, View } from "react-native";
 import SectionCard from "../../components/organisms/SectionCard";
 import { containerMargin, Screen, scrollViewBottomSpace } from "../../theme/measures";
-import { EvItem } from "../../components/molecules/EvItem";
+import { EvItem } from "./components/EvItem";
 import EvsList from "../../config/EvsList.json";
 import EvsBanners from "../../config/EvBanners.json"
+import Fab from "./Fab";
+import useIsReady from "../../utils/NavigationTranistionUtils";
+import Spinner from "../../components/atoms/Spinner";
+import { Navigator } from "../../navigation/Navigator";
+import { RouteNames } from "../../navigation/RouteNames";
 
 const CAROUSAL = 'carousal';
 const EV = 'EV';
@@ -20,6 +25,7 @@ const sectionData: any[] = [
 ]
 export default function EvContainer() {
     const [evsListData] = useState(EvsList);
+    const isReady = useIsReady();
 
     const itemView = ({ item, index }) => {
         let view = null;
@@ -28,7 +34,7 @@ export default function EvContainer() {
         } else if (item?.operator) {
             view = (
                 <View style={styles.items}>
-                    <EvItem item={item} />
+                    <EvItem item={item} onBook={() => {Navigator.navigate(RouteNames.evFilter)}} />
                 </View>
             )
         }
@@ -39,16 +45,25 @@ export default function EvContainer() {
         return null;
     }
 
+    const separator = useCallback(() => {
+        return <View style={styles.separator} />;
+    }, [])
+
     const key = (item, index) => item + index;
 
-    return <SectionList
-        sections={sectionData}
-        keyExtractor={key}
-        renderItem={itemView}
-        renderSectionHeader={headerView}
-        contentContainerStyle={styles.sectionList}
-        SectionSeparatorComponent={() => <View style={styles.separator} />}
-    />
+    return (
+        <>
+            {isReady ? <SectionList
+                sections={sectionData}
+                keyExtractor={key}
+                renderItem={itemView}
+                renderSectionHeader={headerView}
+                contentContainerStyle={styles.sectionList}
+                SectionSeparatorComponent={separator}
+            /> : <Spinner />}
+            <Fab />
+        </>
+    )
 }
 
 const styles = StyleSheet.create({
@@ -56,7 +71,7 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     sectionList: {
-        paddingBottom: scrollViewBottomSpace,
+        paddingBottom: scrollViewBottomSpace + 70,
         paddingTop: containerMargin,
     },
     separator: {

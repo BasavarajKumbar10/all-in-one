@@ -3,22 +3,23 @@ import { PixelRatio, StyleProp, StyleSheet, View, ViewStyle } from "react-native
 import { useTheme, Subheading, Paragraph, Caption, Card, Title, Button, Avatar, Chip, Text } from "react-native-paper";
 import { Image } from "react-native-paper/lib/typescript/components/Avatar/Avatar";
 import FastImage from 'react-native-fast-image'
-import { AvatarInitials } from "./AvatarInititals";
+import { AvatarInitials } from "../../../components/molecules/AvatarInititals";
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import { Units } from "../../config/enums";
-import { Currency } from "../../config/UserConstants";
-import { appColors } from "../../theme/colors";
+import { Units } from "../../../config/enums";
+import { Currency } from "../../../config/UserConstants";
+import { appColors } from "../../../theme/colors";
 
 interface IProps {
     customStyle?: StyleProp<ViewStyle>;
     item: IEv;
+    onBook: () => void;
 };
 
 const size = 18;
 
 export function EvItem(props: IProps) {
-    const { customStyle, item } = props;
+    const { customStyle, item, onBook } = props;
     const { colors } = useTheme();
     const imageSize = PixelRatio.getPixelSizeForLayoutSize(size);
 
@@ -54,7 +55,7 @@ export function EvItem(props: IProps) {
             </Card.Content>
             <Card.Actions style={styles.actions}>
                 <Button onPress={() => {}}>Direction</Button>
-                <Button onPress={() => {}} disabled={!item.isAvailable} >Book</Button>
+                <Button onPress={onBook} disabled={!item.isAvailable} >Book</Button>
             </Card.Actions>
             <View style={[styles.status, { backgroundColor: statusColor }]}/>
         </Card>

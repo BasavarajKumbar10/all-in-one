@@ -6,7 +6,10 @@ export const UserConstants = Object.freeze({
     pharmacy: 'Pharmacy',
     salon: 'Salon & Spa',
     travels: 'travels',
-    transferMoney: 'Transfer Money'
+    transferMoney: 'Transfer Money',
+    screeTitle: {
+        evFilter: 'Filter'
+    }
 });
 
 export const Currency = Object.freeze({

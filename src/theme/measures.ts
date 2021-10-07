@@ -5,6 +5,6 @@ export const Screen = {
     height: Dimensions.get('screen').height,
 }
 
-export const containerMargin = 16;
+export const containerMargin = 10;
 export const defaultIconSize = 12;
 export const scrollViewBottomSpace = PixelRatio.getPixelSizeForLayoutSize(8)

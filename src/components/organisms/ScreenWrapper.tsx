@@ -9,9 +9,11 @@ import {useSafeAreaInsets} from "react-native-safe-area-context";
 interface IProps {
     navigation: INavigation;
     children: React.ReactElement;
+    showNavBar?: boolean;
+    screenTitle?: string;
 }
 function ScreenWrapper(props: IProps) {
-    const { navigation, children } = props;
+    const { navigation, children, showNavBar, screenTitle = '' } = props;
 
     const {
         colors
@@ -35,7 +37,7 @@ function ScreenWrapper(props: IProps) {
                 animated={true}
                 backgroundColor={colors.accent}
                 barStyle={"default"}/>
-            {/* <NavigationBar navigation={navigation} title={RouteNames.home} /> */}
+            {showNavBar && <NavigationBar navigation={navigation} title={screenTitle} />}
             {children}
         </SafeAreaView>
     );

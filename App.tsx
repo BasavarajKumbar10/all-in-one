@@ -1,7 +1,8 @@
 import React from 'react';
 import {DefaultTheme, Provider as PaperProvider} from 'react-native-paper';
-import {App as AppHolder} from './src/App';
+import {BottomTabNavigation} from "./src/navigation/BottomTabNavigation";
 import {NavigationContainer} from "@react-navigation/native";
+import { navigationRef } from './src/navigation/Navigator';
 
 const theme = {
   ...DefaultTheme,
@@ -9,15 +10,15 @@ const theme = {
     ...DefaultTheme.colors,
     // primary: '#ff7043',
     primary: '#03dac5',
-    accent: '#03dac5',
-      text: '#260f03'
+    accent: '#00b798',
+    text: '#260f03'
   },
 };
 const App = () => {
   return (
       <PaperProvider theme={theme}>
           <NavigationContainer theme={theme}>
-              <AppHolder />
+              <BottomTabNavigation />
           </NavigationContainer>
       </PaperProvider>
   );

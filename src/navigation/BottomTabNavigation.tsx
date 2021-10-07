@@ -9,8 +9,29 @@ import ProfileScreen from "../screens/ProfileScreen";
 import {RouteNames} from "./RouteNames";
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {useTheme} from 'react-native-paper';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { Text } from 'react-native';
+import EvFiltersScreen from '../screens/EvFiltersScreen';
 
 const Tab = createMaterialBottomTabNavigator();
+const EvsStack = createNativeStackNavigator();
+
+function EvsStackScreen(){
+    return (
+        <EvsStack.Navigator>
+            <EvsStack.Screen
+                name={RouteNames.evList}
+                component={EvScreen}
+                options={{headerShown:false}}
+            />
+             <EvsStack.Screen
+                name={RouteNames.evFilter}
+                component={EvFiltersScreen}
+                options={{headerShown:false}}
+            />
+        </EvsStack.Navigator>
+    );
+}
 
 export function BottomTabNavigation() {
     const { colors } = useTheme();
@@ -46,7 +67,10 @@ export function BottomTabNavigation() {
                 name={RouteNames.home} component={HomeScreen} />
             <Tab.Screen name={RouteNames.promotion} component={PromoScreen} />
             {/* <Tab.Screen name={RouteNames.cabs} component={CabsScreen} /> */}
-            <Tab.Screen name={RouteNames.evCharge} component={EvScreen} />
+            <Tab.Screen
+                name={RouteNames.evCharge}
+                component={EvsStackScreen} 
+            />
             <Tab.Screen name={RouteNames.profile} component={ProfileScreen} />
         </Tab.Navigator>
     );
