@@ -16,7 +16,7 @@ import EvFiltersScreen from '../screens/EvFiltersScreen';
 const Tab = createMaterialBottomTabNavigator();
 const EvsStack = createNativeStackNavigator();
 
-function EvsStackScreen(){
+export function EvsStackScreen(){
     return (
         <EvsStack.Navigator>
             <EvsStack.Screen

@@ -27,6 +27,9 @@ export default function EvContainer() {
     const [evsListData] = useState(EvsList);
     const isReady = useIsReady();
 
+    const onBook = useCallback(() => {
+
+    }, [])
     const itemView = ({ item, index }) => {
         let view = null;
         if (item === CAROUSAL) {
@@ -34,7 +37,7 @@ export default function EvContainer() {
         } else if (item?.operator) {
             view = (
                 <View style={styles.items}>
-                    <EvItem item={item} onBook={() => {Navigator.navigate(RouteNames.evFilter)}} />
+                    <EvItem item={item} onBook={onBook} />
                 </View>
             )
         }

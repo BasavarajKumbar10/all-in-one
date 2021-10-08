@@ -1,0 +1,4 @@
+{
+    "chargeOptions": ["AC Type 1", "AC Type 2", "DC"],
+    "operator": ["Available", "Next Availability"]
+}

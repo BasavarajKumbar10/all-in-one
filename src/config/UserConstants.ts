@@ -12,6 +12,13 @@ export const UserConstants = Object.freeze({
     }
 });
 
+export const Titles = Object.freeze({
+    chargingOptions: 'Charging Options',
+    perticularOperator: 'Perticular Operators',
+    charginSpeed: 'Charging Speed',
+    nextAvailable: 'Next Availability'
+});
+
 export const Currency = Object.freeze({
     INR: '\u20B9',
 });

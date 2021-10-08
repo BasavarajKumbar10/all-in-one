@@ -24,7 +24,7 @@ function ScreenWrapper(props: IProps) {
     const containerStyle = [
         styles.container,
         {
-            backgroundColor: colors.background,
+            backgroundColor: colors.screenBackground,
             paddingBottom: insets.bottom,
             paddingLeft: insets.left,
             paddingRight: insets.left,

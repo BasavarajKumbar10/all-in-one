@@ -7,4 +7,5 @@ export const Screen = {
 
 export const containerMargin = 10;
 export const defaultIconSize = 12;
-export const scrollViewBottomSpace = PixelRatio.getPixelSizeForLayoutSize(8)
+export const scrollViewBottomSpace = PixelRatio.getPixelSizeForLayoutSize(8);
+export const cardRadius = 10;
