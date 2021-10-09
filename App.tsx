@@ -1,9 +1,8 @@
 import React from 'react';
 import {configureFonts, DefaultTheme, Provider as PaperProvider} from 'react-native-paper';
-import {BottomTabNavigation, EvsStackScreen} from "./src/navigation/BottomTabNavigation";
 import {NavigationContainer} from "@react-navigation/native";
 import { navigationRef } from './src/navigation/Navigator';
-import EvFiltersScreen from './src/screens/EvFiltersScreen';
+import Root from './src/root'
 
 const fontConfig = {
   ios: {
@@ -67,8 +66,7 @@ const App = () => {
   return (
       <PaperProvider theme={theme}>
           <NavigationContainer ref={navigationRef} theme={theme}>
-              {/* <BottomTabNavigation /> */}
-              <EvsStackScreen />
+            <Root />   
           </NavigationContainer>
       </PaperProvider>
   );

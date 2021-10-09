@@ -16,7 +16,8 @@ export const Titles = Object.freeze({
     chargingOptions: 'Charging Options',
     perticularOperator: 'Perticular Operators',
     charginSpeed: 'Charging Speed',
-    nextAvailable: 'Next Availability'
+    nextAvailable: 'Next Availability',
+    route: 'Route',
 });
 
 export const Currency = Object.freeze({

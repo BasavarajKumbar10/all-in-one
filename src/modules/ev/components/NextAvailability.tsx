@@ -23,10 +23,10 @@ function NextAvailability(props: IProps) {
 
     return (
         <View style={filterCardStyles.container}>
-            <View style={styles.ranges}>
-                <Subheading>{Titles.nextAvailable}</Subheading>
-                <View style={styles.valueView}>
-                    <Text style={[styles.value, fonts.medium]}>
+            <View style={filterCardStyles.ranges}>
+                <Subheading style={[fonts.medium, filterCardStyles.title]}>{Titles.nextAvailable}</Subheading>
+                <View style={filterCardStyles.valueView}>
+                    <Text style={[filterCardStyles.value, fonts.medium]}>
                     {`${hr} hrs`}
                     </Text>
                 </View>
@@ -42,9 +42,9 @@ function NextAvailability(props: IProps) {
                     value={hr}
                     onValueChange={onAvailability}
                 />
-                <View style={styles.ranges}>
-                    <Caption style={styles.rangeMinimum}>{NEXT_AVAILABLE.minimum}</Caption>
-                    <Caption style={styles.rangeMax}>{NEXT_AVAILABLE.maximum}</Caption>
+                <View style={filterCardStyles.ranges}>
+                    <Caption style={filterCardStyles.rangeMinimum}>{NEXT_AVAILABLE.minimum}</Caption>
+                    <Caption style={filterCardStyles.rangeMax}>{NEXT_AVAILABLE.maximum}</Caption>
                 </View>
 
             </View>
@@ -56,26 +56,5 @@ const styles = StyleSheet.create({
     slider: {
         width: '100%', height: 6, marginTop: 14
     },
-    ranges: {
-        flex: 1,
-        flexDirection: 'row',
-        justifyContent: 'space-between'
-    },
-    rangeMinimum: {
-        marginLeft: Screen.width * 0.1 - 30,
-    },
-    rangeMax: {
-        marginRight: Screen.width * 0.1 - 30,
-    },
-    valueView: {
-        borderRadius: 4,
-        paddingVertical: 4,
-        paddingHorizontal: 8, 
-        backgroundColor: '#FB8C00'
-    },
-    value: {
-        fontSize: 16,
-        color: '#fff',
-    }
 });
 export const MemoNextAvailability = memo(NextAvailability);

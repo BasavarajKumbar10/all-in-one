@@ -23,10 +23,10 @@ function ChargingSpeed(props: IProps) {
 
     return (
         <View style={filterCardStyles.container}>
-            <View style={styles.ranges}>
-                <Subheading>{Titles.charginSpeed}</Subheading>
-                <View style={styles.valueView}>
-                    <Text style={[styles.value, fonts.medium]}>
+            <View style={filterCardStyles.ranges}>
+                <Subheading style={[fonts.medium, filterCardStyles.title]}>{Titles.charginSpeed}</Subheading>
+                <View style={filterCardStyles.valueView}>
+                    <Text style={[filterCardStyles.value, fonts.medium]}>
                     {`${kWh} kWh`}
                     </Text>
                 </View>
@@ -34,17 +34,17 @@ function ChargingSpeed(props: IProps) {
             <View>
                 <Slider
                     style={styles.slider}
-                    minimumValue={3}
-                    maximumValue={12}
+                    minimumValue={CHARGING_SPEED.minimum}
+                    maximumValue={CHARGING_SPEED.maximum}
                     minimumTrackTintColor={colors.accent}
                     maximumTrackTintColor={colors.primary}
-                    step={1}
+                    step={2}
                     value={kWh}
                     onValueChange={onKwh}
                 />
-                <View style={styles.ranges}>
-                    <Caption style={styles.rangeMinimum}>{CHARGING_SPEED.minimum}</Caption>
-                    <Caption style={styles.rangeMax}>{CHARGING_SPEED.maximum}</Caption>
+                <View style={filterCardStyles.ranges}>
+                    <Caption style={filterCardStyles.rangeMinimum}>{CHARGING_SPEED.minimum}</Caption>
+                    <Caption style={filterCardStyles.rangeMax}>{CHARGING_SPEED.maximum}</Caption>
                 </View>
 
             </View>
@@ -56,26 +56,5 @@ const styles = StyleSheet.create({
     slider: {
         width: '100%', height: 6, marginTop: 14
     },
-    ranges: {
-        flex: 1,
-        flexDirection: 'row',
-        justifyContent: 'space-between'
-    },
-    rangeMinimum: {
-        marginLeft: Screen.width * 0.1 - 30,
-    },
-    rangeMax: {
-        marginRight: Screen.width * 0.1 - 30,
-    },
-    valueView: {
-        borderRadius: 4,
-        paddingVertical: 4,
-        paddingHorizontal: 8, 
-        backgroundColor: '#FB8C00'
-    },
-    value: {
-        fontSize: 16,
-        color: '#fff',
-    }
 });
 export const MemoChargingSpeed = memo(ChargingSpeed);

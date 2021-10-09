@@ -1,6 +1,6 @@
 import React, { memo } from "react";
 import { StyleSheet, View } from "react-native";
-import { Chip, Subheading, Text } from "react-native-paper";
+import { Chip, Subheading, Text, useTheme } from "react-native-paper";
 import { cardRadius, containerMargin } from "../../../theme/measures";
 import { filterCardStyles } from "./filtercard.styles";
 
@@ -13,6 +13,7 @@ interface IProps {
 
 export const LabelChipOptions = memo((props: IProps) => {
     const { options, onSelection, selected, title } = props;
+    const { fonts } = useTheme();
 
     if (!options || options.length === 0) {
         return null;
@@ -20,7 +21,7 @@ export const LabelChipOptions = memo((props: IProps) => {
 
     return (
         <View style={filterCardStyles.container}>
-            <Subheading>{title}</Subheading>
+            <Subheading style={[fonts.medium, filterCardStyles.title]}>{title}</Subheading>
             <View style={styles.list}>
                 {
                     options.map((str) => {
@@ -29,7 +30,10 @@ export const LabelChipOptions = memo((props: IProps) => {
                         return <Chip
                             selected={isSelected}
                             style={styles.chip}
-                            onPress={onPress}>
+                            onPress={onPress}
+                            // selectedColor={'#B2EBF2'}
+                            // textStyle={{color: '#B2EBF2'}}
+                            >
                             {str}
                         </Chip>
                     })

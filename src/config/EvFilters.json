@@ -1,4 +1,4 @@
 {
-    "chargeOptions": ["AC Type 1", "AC Type 2", "DC"],
+    "chargeOptions": ["Type 1", "Type 2", "CCS", "CHAdeMo"],
     "operator": ["Available", "Next Availability"]
 }

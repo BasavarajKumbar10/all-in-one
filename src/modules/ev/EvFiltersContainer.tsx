@@ -6,11 +6,12 @@ import { containerMargin } from "../../theme/measures";
 import { Titles } from "../../config/UserConstants";
 import { MemoChargingSpeed } from "./components/ChargingSpeed";
 import { MemoNextAvailability } from "./components/NextAvailability";
+import { MemoRouteMap } from "./components/RouteMap";
+
 
 export function EvFiltersContainer(){
     const [chargeType, setChargeType] = useState([]);
     const [operator, setOperator] = useState([]);
-
 
     const onChargeType = useCallback((str: string, isSelected: boolean) => {
         let updated: string[] = [...chargeType];
@@ -48,12 +49,14 @@ export function EvFiltersContainer(){
             />
             <MemoChargingSpeed />
             <MemoNextAvailability />
+            <MemoRouteMap/>
         </ScrollView>
     );
 }
 
 const styles = StyleSheet.create({
     container: {
-        paddingVertical: containerMargin + 10,
+        paddingTop: 4,
+        paddingBottom: containerMargin + 10,
     }
 });

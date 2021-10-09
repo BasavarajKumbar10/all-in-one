@@ -1,98 +1,125 @@
 [
     {
-        "operator": "Operator 1",
-        "address": "this the address and I am gonna share it",
-        "charges": [{
-            "price": 200.5,
-            "unit": "kWh"
+      "operator": "Operator 1",
+      "address": "Kormangala 1st Main, 2nd Cross, Bangalore 50064",
+      "charges": [
+        {
+          "price": 12,
+          "unit": "kWh"
         },
         {
-            "price": 3.5,
-            "unit": "min"
-        }],
-        "isAvailable": true,
-        "imageUrl": "https://images.pexels.com/photos/1987301/pexels-photo-1987301.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-        "id": "saf234s5df",
-        "type": ["AC Type 1", "AC Type 2", "DC"]
+          "price": 12,
+          "unit": "min"
+        }
+      ],
+      "isAvailable": true,
+      "imageUrl": "https://images.pexels.com/photos/1987301/pexels-photo-1987301.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "id": "saf234s5df",
+      "type": [
+        "AC Type 1",
+        "AC Type 2",
+        "DC"
+      ]
     },
     {
-        "operator": "Operator 2",
-        "address": "this the address and I am gonna share it",
-        "charges": [{
-            "price": 345.5,
-            "unit": "kWh"
+      "operator": "Operator 2",
+      "address": "BTM 1st Main, 2nd Cross, Bangalore 50076",
+      "charges": [
+        {
+          "price": 14,
+          "unit": "kWh"
         },
         {
-            "price": 3,
-            "unit": "min"
-        }],
-        "isAvailable": false,
-        "imageUrl": "https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510__340.jpg",
-        "id": "saf23dfsf",
-        "type": ["AC Type 1"]
+          "price": 14,
+          "unit": "min"
+        }
+      ],
+      "isAvailable": false,
+      "imageUrl": "https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510__340.jpg",
+      "id": "saf23dfsf",
+      "type": [
+        "AC Type 1"
+      ]
     },
     {
-        "operator": "Operator 3",
-        "address": "this the address and I am gonna share it",
-        "charges": [{
-            "price": 320.5,
-            "unit": "kWh"
+      "operator": "Operator 3",
+      "address": "BTM  2nd Main, 2nd Cross, Bangalore 50074",
+      "charges": [
+        {
+          "price": 11,
+          "unit": "kWh"
         },
         {
-            "price": 2.9,
-            "unit": "min"
-        }],
-        "isAvailable": true,
-        "imageUrl": "https://media.istockphoto.com/photos/colored-powder-explosion-abstract-closeup-dust-on-backdrop-colorful-picture-id1072093690?k=20&m=1072093690&s=612x612&w=0&h=Ns3WeEm1VrIHhZOmhiGY_fYKvIlbJrVADLqfxyPQVPM=",
-        "id": "saf234s234dff",
-        "type": ["DC"]
+          "price": 11,
+          "unit": "min"
+        }
+      ],
+      "isAvailable": true,
+      "imageUrl": "https://media.istockphoto.com/photos/colored-powder-explosion-abstract-closeup-dust-on-backdrop-colorful-picture-id1072093690?k=20&m=1072093690&s=612x612&w=0&h=Ns3WeEm1VrIHhZOmhiGY_fYKvIlbJrVADLqfxyPQVPM=",
+      "id": "saf234s234dff",
+      "type": [
+        "DC"
+      ]
     },
     {
-        "operator": "Operator 4",
-        "address": "this the address and I am gonna share it",
-        "charges": [{
-            "price": 1000.5,
-            "unit": "kWh"
+      "operator": "Operator 4",
+      "address": "Kormangala 1st Main, 3rd Cross, Bangalore 50066",
+      "charges": [
+        {
+          "price": 13,
+          "unit": "kWh"
         },
         {
-            "price": 10.5,
-            "unit": "min"
-        }],
-        "isAvailable": true,
-        "imageUrl": "https://images.pexels.com/photos/1987301/pexels-photo-1987301.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-        "id": "saf23dfa4sdf",
-        "type": ["AC Type 2", "DC"]
+          "price": 10,
+          "unit": "min"
+        }
+      ],
+      "isAvailable": true,
+      "imageUrl": "https://images.pexels.com/photos/1987301/pexels-photo-1987301.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "id": "saf23dfa4sdf",
+      "type": [
+        "AC Type 2",
+        "DC"
+      ]
     },
     {
-        "operator": "Operator 5",
-        "address": "this the ress and I am gonna share it, address and I am gonna share it",
-        "charges": [{
-            "price": 2090,
-            "unit": "kWh"
+      "operator": "Operator 5",
+      "address": "BTM 2nd Main, 2nd Cross, Bangalore 50072",
+      "charges": [
+        {
+          "price": 14,
+          "unit": "kWh"
         },
         {
-            "price": 35,
-            "unit": "min"
-        }],
-        "isAvailable": true,
-        "imageUrl": "https://images.pexels.com/photos/1987301/pexels-photo-1987301.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-        "id": "saf232344sdf",
-        "type": ["AC Type 2"]
+          "price": 10,
+          "unit": "min"
+        }
+      ],
+      "isAvailable": true,
+      "imageUrl": "https://images.pexels.com/photos/1987301/pexels-photo-1987301.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "id": "saf232344sdf",
+      "type": [
+        "AC Type 2"
+      ]
     },
     {
-        "operator": "Operator 6",
-        "address": "this the address and I am gonna share it, ress and I am gonna share it ,ress and I am gonna share it",
-        "charges": [{
-            "price": 200.5,
-            "unit": "kWh"
+      "operator": "Operator 6",
+      "address": "BTM 2nd Main, 3rd Cross, Bangalore 50073",
+      "charges": [
+        {
+          "price": 10,
+          "unit": "kWh"
         },
         {
-            "price": 3.5,
-            "unit": "min"
-        }],
-        "isAvailable": true,
-        "imageUrl": "https://images.pexels.com/photos/1987301/pexels-photo-1987301.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-        "id": "saf234123sdf",
-        "type": ["AC Type 2"]
+          "price": 8,
+          "unit": "min"
+        }
+      ],
+      "isAvailable": true,
+      "imageUrl": "https://images.pexels.com/photos/1987301/pexels-photo-1987301.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "id": "saf234123sdf",
+      "type": [
+        "AC Type 2"
+      ]
     }
-]
+  ]
