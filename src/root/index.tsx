@@ -12,8 +12,8 @@ export default function() {
     }, [])
     return (
 <>
- {/* <BottomTabNavigation /> */}
- <EvsStackScreen />
+ <BottomTabNavigation />
+ {/* <EvsStackScreen /> */}
 </>
     );
 }

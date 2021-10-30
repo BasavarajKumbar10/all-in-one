@@ -18,7 +18,7 @@ const EvsStack = createNativeStackNavigator();
 
 export function EvsStackScreen(){
     return (
-        <EvsStack.Navigator initialRouteName={RouteNames.evFilter}>
+        <EvsStack.Navigator initialRouteName={RouteNames.evList}>
             <EvsStack.Screen
                 name={RouteNames.evList}
                 component={EvScreen}

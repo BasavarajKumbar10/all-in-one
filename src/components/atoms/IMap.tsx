@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
-import MapboxGL, {MapViewProps} from "@react-native-mapbox-gl/maps";
+import MapboxGL, { MapViewProps } from "@react-native-mapbox-gl/maps";
 import { requestMultipleAndroidPermissions } from "../../utils/Permissions";
 import { StyleSheet, ViewStyle } from "react-native";
 
 interface IProps {
     mapProps?: MapViewProps;
     customStyle?: ViewStyle;
+    children?: any;
 }
 export function IMap(props: IProps) {
-    const { mapProps, customStyle } = props;
+    const { mapProps, customStyle, children } = props;
     const [showMap, setShowMap] = useState(false);
     // effects
     useEffect(() => {
@@ -25,7 +26,9 @@ export function IMap(props: IProps) {
         return null;
     }
     return (
-        <MapboxGL.MapView style={[styles.container, customStyle]} {...mapProps}/>
+        <MapboxGL.MapView style={[styles.container, customStyle]} {...mapProps}>
+            {children}
+        </MapboxGL.MapView>
     );
 }
 
